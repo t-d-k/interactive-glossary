@@ -1,16 +1,36 @@
 import { useState } from 'react'
-import './ConceptStyles.css'
+import './ConceptsStyles.css'
+import concept, { conceptList } from './Concept';
 
+function Concepts(params) {
+    const [selTag, setselTag] = useState('');
 
-function Concept(params) {
+    function onButton(evt, tag, onSelected) {
+        setselTag(tag);
+        onSelected(tag);
+    }
+    function listConcepts() {
+        let res = [];
+        conceptList.forEach(conc => {
+            res.push(<button
+                class={conc.tag == selTag?'selBtn':'btn'}
+                onClick={(evt) => onButton(evt, conc.tag, params.onSelected)}
+            >{conc.tag}
+                </button>)
+
+        });
+        return res;
+    }
 
     const [count, setCount] = useState(0)
-   
+
     return (
-        <div id="btnDiv" style={{ backgroundColor: params.col }}
-            onClick={getCol}
+        <div id="conceptsDiv"
+
         >
+            {listConcepts()}
+
         </div>
     )
 }
-export default Concept
+export default Concepts

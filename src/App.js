@@ -1,25 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import Concepts from './Concepts';
+import Details from './Details';
+import { useState } from 'react';
+import { getDetailsFromTag } from './Concept';
 
 function App() {
+  const [contents, setContents] = useState('')
+
+  function doSelected(tag) {
+    
+    const dets= getDetailsFromTag(tag);
+    setContents(dets);
+    // alert(tag)
+    // setAnswered(true);
+}
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="App-main">
+       <Concepts  onSelected={doSelected}></Concepts>
+       <Details contents={contents}></Details>
       </header>
     </div>
   );
 }
+
+
 
 export default App;

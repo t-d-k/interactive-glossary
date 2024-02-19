@@ -7,10 +7,9 @@ function Details(params) {
     const [count, setCount] = useState(0)
    
     return (
-        <div id="btnDiv" style={{ backgroundColor: params.col }}
-            onClick={getCol}
+        <div id="detailsDiv"         
         >
-        </div>
+           {params.contents}    </div>
     )
 }
 export default Details
