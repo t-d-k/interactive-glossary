@@ -1,20 +1,34 @@
 import { useState } from 'react'
 import './ConceptsStyles.css'
-import concept, { conceptList } from './Concept';
+import  { conceptList } from './Concept';
 
+/**
+ * 
+ * @param {object} params (onSelected callback)
+ * @returns 
+ */
 function Concepts(params) {
     const [selTag, setselTag] = useState('');
 
-    function onButton(evt, tag, onSelected) {
+    /**
+     * 
+     * @param {string} tag name of concept selected
+     * @param {callback} onSelected callback when selected changed
+     */
+    function onButton( tag, onSelected) {
         setselTag(tag);
         onSelected(tag);
     }
+    /**
+     * 
+     * @returns component list of concept buttons
+     */
     function listConcepts() {
         let res = [];
         conceptList.forEach(conc => {
             res.push(<button
-                class={conc.tag == selTag?'selBtn':'btn'}
-                onClick={(evt) => onButton(evt, conc.tag, params.onSelected)}
+                class={conc.tag === selTag?'selBtn':'btn'}
+                onClick={() => onButton( conc.tag, params.onSelected)}
             >{conc.tag}
                 </button>)
 
@@ -22,14 +36,9 @@ function Concepts(params) {
         return res;
     }
 
-    const [count, setCount] = useState(0)
-
     return (
-        <div id="conceptsDiv"
-
-        >
+        <div id="conceptsDiv">
             {listConcepts()}
-
         </div>
     )
 }

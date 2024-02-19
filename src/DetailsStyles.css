@@ -1,7 +1,15 @@
+/* palette 
+Background Colour: #f7f7f7 (Light gray) 
+Text Colour: #333333 (Dark gray)
+Highlight Colour: #007acc (Blue)
+*/
 #detailsDiv {
 
     flex: 0 0 60%;
-    background-color: lightgrey;
-    padding:0.5em;
- 
+    background-color: #f7f7f7;
+    color: #333333;
+
+    padding: 0.5em;
+    border-radius: 20px;
+
 }

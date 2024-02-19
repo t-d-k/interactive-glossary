@@ -1,3 +1,6 @@
+/**
+ * represents a concept to explain
+ */
 class concept {
     constructor(tag, details) {
         this.tag = tag;
@@ -29,8 +32,14 @@ export const conceptList = [
     new concept('Variable Scope', ' The context in which a variable is defined and can be accessed within a program.'),
     new concept('Library', 'A collection of pre-written code that provides specific functionality, which can be reused by including it in a program.')
 ];
+
+/**
+ * 
+ * @param {string} tag get the details to display from the concept name
+ * @returns 
+ */
 export function getDetailsFromTag(tag) {
-    return conceptList.find(el => el.tag == tag).details;
+    return conceptList.find(el => el.tag === tag).details;
 }
 
 export default concept;

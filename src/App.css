@@ -1,26 +1,23 @@
-.App {
+/* palette 
+Background Colour: #f7f7f7 (Light gray) 
+Text Colour: #333333 (Dark gray)
+Highlight Colour: #007acc (Blue)
+*/
+.App,
+h1 {
   text-align: center;
+  background-color: #333333;
+  color: #f7f7f7;
+  margin: 0px;
 }
 
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-main {
-  background-color: #282c34;
   min-height: 100vh;
-  /* display: flex;
-  flex-direction: column; */
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
- 
-    display:flex;
-    flex-wrap: wrap;
-
+  color: #f7f7f7;
+  display: flex;
+  flex-wrap: wrap;
 }
-

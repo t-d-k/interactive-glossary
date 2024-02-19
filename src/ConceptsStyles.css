@@ -1,19 +1,33 @@
+/* palette 
+Background Colour: #f7f7f7 (Light gray) 
+Text Colour: #333333 (Dark gray)
+Highlight Colour: #007acc (Blue)
+*/
+/* h1{
+    background-color: #f7f7f7;
+    color:#333333;
+} */
 #conceptsDiv {
     flex: 0 0 30%;
-    background-color: aquamarine;
+    background-color: #f7f7f7;
     padding:0.5em;
     margin: 0.5em;
     display:flex;
     flex-wrap: wrap;
+    text-align: center;
 }
 
 .btn, .selBtn{
-
+    margin:0.2em auto;
+    padding:0.2em;
     flex: 0 0 90%;
+    border-radius: 20px;    
 }
 .selBtn{
-    background-color: white;
+    background-color: #007acc;
+    color:#333333;
 }
 .btn{
-    background-color: green;
+    color:#f7f7f7;
+    background-color: #333333;
 }
