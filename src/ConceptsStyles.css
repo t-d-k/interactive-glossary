@@ -1,0 +1,19 @@
+#conceptsDiv {
+    flex: 0 0 30%;
+    background-color: aquamarine;
+    padding:0.5em;
+    margin: 0.5em;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.btn, .selBtn{
+
+    flex: 0 0 90%;
+}
+.selBtn{
+    background-color: white;
+}
+.btn{
+    background-color: green;
+}
