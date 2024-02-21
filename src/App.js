@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Concepts from './Concepts';
 import Details from './Details';
